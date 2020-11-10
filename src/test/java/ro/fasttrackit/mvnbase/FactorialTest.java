@@ -9,7 +9,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FactorialTest {
-    //scriem setupul la inceptul si cu adontarea @BeforeEach il va lura inainte de fiecare test
+    //scriem setupul la inceptul si cu adontarea @BeforeEach il va lua inainte de fiecare test
+    //nu trebuie scris la fiecare metoda
     Factorial factorial;
     @BeforeEach
    void setup(){
