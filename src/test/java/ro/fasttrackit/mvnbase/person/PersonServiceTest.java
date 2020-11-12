@@ -20,16 +20,7 @@ class PersonServiceTest {
     void emptyPerosnService(){
         assertThat(personService.getAllPerson()).isEmpty();
     }
-    @Test
-    @DisplayName("when a person is added then the size is increased and ID is set")
-    void addPerson(){
 
-    }
-    @Test
-    @DisplayName("when name contains numbers then IleggalArgumentException is thrown")
-    void numbersInName(){
-        var exception = Assertions.assertThrows(IllegalArgumentException.class, ()->new Person(1,"Popescu", 33));
-        assertThat(exception.getMessage()).isEqualTo("Invalid name: null is not allowed");
-    }
+
 
 }

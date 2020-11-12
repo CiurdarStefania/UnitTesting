@@ -45,7 +45,9 @@ class PersonTest {
     void spacialName() {
         var response = new Person(1, "Maria-Ana B'", 33);
         assertThat(response)
+                //ce vrem sa extragem din obiect
                 .extracting("name", "age")
+                //ii zicem ce vrea sa ne dea  = "Maria-Ana B'", 33
                 .containsExactly("Maria-Ana B'", 33);
     }
 

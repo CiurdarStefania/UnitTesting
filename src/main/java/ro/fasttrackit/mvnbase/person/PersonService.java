@@ -13,25 +13,28 @@ public class PersonService {
     public PersonService() {
         persons = new ArrayList<>();
     }
-    public Person getPersonById(int id){
-        for (Person person: persons){
-            if (person.getId() == id){
+
+    public Person getPersonById(int id) {
+        for (Person person : persons) {
+            if (person.getId() == id) {
                 return person;
             }
         }
         return null;
     }
-    public Person getPerson(String name){
-        for (Person person: persons){
-            if (person.getName().equals(name)){
+
+    public Person getPerson(String name) {
+        for (Person person : persons) {
+            if (person.getName().equals(name)) {
                 return person;
             }
         }
         return null;
     }
-    public List<String> getAllPersonNames(){
+
+    public List<String> getAllPersonNames() {
         List<String> result = new ArrayList<>();
-        for (Person person: persons){
+        for (Person person : persons) {
             result.add(person.getName());
         }
         return result;
@@ -52,10 +55,8 @@ public class PersonService {
         //daca cere o persoana nu creeam o lista
         List<Person> result = new ArrayList<>();
         for (Person person : persons) {
-            if (age < 120) {
+            if (person.getAge() >= age) {
                 result.add(person);
-            } else {
-                return null;
             }
         }
         return result;
